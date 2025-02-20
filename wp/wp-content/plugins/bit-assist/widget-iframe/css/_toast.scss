@@ -1,0 +1,25 @@
+.toast {
+  padding: 12px;
+
+  &.show {
+    display: block;
+  }
+
+  &.error {
+    .toast-text-title {
+      color: #ce6666;
+    }
+  }
+}
+
+.toast-text-title {
+  font-size: 1rem;
+  font-weight: 600;
+  margin-bottom: 8px;
+}
+
+.toast-text-body {
+  font-size: 0.875rem;
+  font-weight: 400;
+  color: #838383;
+}

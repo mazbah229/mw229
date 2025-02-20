@@ -1,0 +1,173 @@
+#widgetWrapper {
+	position: absolute;
+	padding: var(--widget-padding);
+	display: flex;
+	gap: 20px;
+	justify-content: flex-end;
+	max-width: calc(var(--client-win-width) - var(--widget-minus-sizeX));
+}
+
+.bottom-right,
+.top-right {
+	left: auto;
+	right: 0;
+	align-items: flex-end;
+
+	#channels {
+		align-items: flex-end;
+
+		.channel {
+			flex-direction: row;
+		}
+	}
+
+	#widgetBubbleRow {
+		align-items: flex-end;
+	}
+}
+
+.bottom-left,
+.top-left {
+	left: 0;
+	right: auto;
+	align-items: flex-start;
+
+	#channels {
+		align-items: flex-start;
+
+		.channel {
+			flex-direction: row-reverse;
+		}
+	}
+
+	#widgetBubbleRow {
+		align-items: flex-start;
+	}
+}
+
+.bottom-right,
+.bottom-left {
+	flex-direction: column;
+	animation: fadeInFromBottom var(--transition-duration) ease-in-out;
+
+	#credit {
+		top: 100%;
+		bottom: auto;
+	}
+
+	#channels {
+		flex-direction: column;
+		animation: fadeInFromBottom var(--transition-duration) ease-in-out;
+
+		.channel {
+			margin-bottom: 10px;
+
+			&:last-child {
+				margin-bottom: 0;
+			}
+		}
+	}
+
+	#widgetBubbleRow {
+		flex-direction: column;
+	}
+
+	#card {
+		animation: fadeInFromBottom var(--transition-duration) ease-in-out;
+	}
+
+	#callToActionMsg,
+	#closeCallToAction {
+		animation: fadeInFromBottom var(--transition-duration) ease-in-out;
+	}
+
+	#callToActionMsg {
+		margin-bottom: 15px;
+	}
+}
+
+.top-right,
+.top-left {
+	flex-direction: column-reverse;
+	animation: fadeInFromTop var(--transition-duration) ease-in-out;
+
+	#credit {
+		top: auto;
+		bottom: 100%;
+	}
+
+	#channels {
+		flex-direction: column-reverse;
+		animation: fadeInFromTop var(--transition-duration) ease-in-out;
+
+		.channel {
+			margin-top: 10px;
+
+			&:last-child {
+				margin-top: 0;
+			}
+		}
+		.channel:hover {
+			background-color: #f1f1f1;
+		}
+	}
+
+	#widgetBubbleRow {
+		flex-direction: column-reverse;
+	}
+
+	#card {
+		animation: fadeInFromTop var(--transition-duration) ease-in-out;
+	}
+
+	#callToActionMsg,
+	#closeCallToAction {
+		animation: fadeInFromTop var(--transition-duration) ease-in-out;
+	}
+
+	#callToActionMsg {
+		margin-top: 15px;
+	}
+}
+
+.bottom-right {
+	top: auto;
+	bottom: 0;
+}
+
+.top-right {
+	top: 0;
+	bottom: auto;
+}
+
+.bottom-left {
+	top: auto;
+	bottom: 0;
+}
+
+.top-left {
+	top: 0;
+	bottom: auto;
+}
+
+#contentWrapper {
+	max-width: 100%;
+	&.widget-box {
+		border-radius: 12px;
+		background-color: #fff;
+		box-shadow: rgb(0 0 0 / 13%) 0px 5px 8px 0px;
+		animation: fadeInFromBottom var(--transition-duration) ease-in-out;
+	}
+}
+
+#credit {
+	position: absolute;
+	z-index: 9999999;
+	width: 100%;
+	text-align: center;
+	color: #363636;
+	text-shadow: 0.0313rem 0.0313rem 0 rgba(#fff, 0.5);
+	font-size: 0.625rem;
+	display: none;
+	white-space: nowrap;
+}

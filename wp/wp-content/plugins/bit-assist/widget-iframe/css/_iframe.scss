@@ -1,0 +1,36 @@
+#iframe-wrapper {
+	position: relative;
+	max-width: 100%;
+	animation: fadeInFromBottom var(--transition-duration) ease-in-out;
+	border-radius: 12px;
+	overflow: hidden;
+
+	&.youtube {
+		width: 480px;
+		--webkit-aspect-ratio: 16 / 9;
+		aspect-ratio: 16 / 9;
+		background-color: #000;
+	}
+
+	&.google-map{
+		width: 540px;
+		--webkit-aspect-ratio: 3/2;
+		aspect-ratio: 3/2;
+		background-color: #fff;
+		border: 1px solid #777777;
+	}
+
+	&.custom-iframe {
+		width: var(--iframe-width);
+		--webkit-aspect-ratio: var(--iframe-aspect-ratio);
+		aspect-ratio: var(--iframe-aspect-ratio);
+		background-color: #fff;
+		height: var(--iframe-height);
+	}
+
+	iframe {
+		border: 0;
+		width: 100%;
+		height: 100%;
+	}
+}

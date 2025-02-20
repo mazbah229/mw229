@@ -1,0 +1,71 @@
+@use './widget';
+@use './widgetBubble';
+@use './callToAction';
+@use './card';
+@use './channels';
+@use './contactForm';
+@use './rating';
+@use './feedback';
+@use './listItem';
+@use './wpSearch';
+@use './pagination';
+@use './iframe';
+@use './toast';
+@use './keyframes';
+@use './orderDetails';
+
+:root {
+	--widget-color: #00ffa3;
+	--widget-active-badge-color: #00dc00;
+	--animation-delay: 0s;
+	--widget-black: #141844;
+	--widget-size: 60px;
+	--transition-duration: 300ms;
+	--card-theme-color: #23c88c;
+	--card-text-color: #fff;
+	--widget-bubble-icon-color: invert(0);
+	--modal-title-height: 0px;
+	--client-win-width: 0;
+	--client-win-height: 0;
+	--widget-minus-sizeY: 0;
+	--widget-minus-sizeX: 0;
+	--widget-padding: 10px;
+	--card-width: 330px;
+	--iframe-width: 540px;
+	--iframe-height: initial;
+	--iframe-aspect-ratio: initial;
+}
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+::-webkit-scrollbar {
+	width: 4px;
+}
+
+::-webkit-scrollbar-thumb {
+	background: #cdcdcd;
+	border-radius: 4px;
+}
+
+body {
+	overflow: hidden;
+	font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.hide {
+	display: none !important;
+}
+
+.iconBtn {
+	cursor: pointer;
+	background-color: transparent;
+	border: none;
+
+	&.rounded {
+		border-radius: 50%;
+	}
+}
